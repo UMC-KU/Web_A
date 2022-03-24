@@ -1,0 +1,30 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #004a26;
+}
+#header-center{
+    display: flex;
+    flex-direction: column;
+}
+#top-menu{
+    display: flex;
+    padding-top: 10px;
+}
+#top-menu ul{
+    display: flex;
+    color: white;
+}
+#top-menu ul li{
+    padding-right: 6px;
+}
+#bottom-menu ul{
+    display: flex;
+    color: white;
+}
+#bottom-menu ul li{
+    padding: 10px;
+}
+li{
+    list-style: none;
+}
