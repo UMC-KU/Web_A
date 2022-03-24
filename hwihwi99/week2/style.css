@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    font-size: 30px;
+    background-color: pink;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+div:hover {
+    background-color: gray;
+}
+
+#yellow:hover {
+    background-color: black;
+}
+
+div:active {
+    background-color: purple;
+}
+
+input:focus {
+    background-color: blue;
+}
+
+.flex-container {
+    background-color: teal;
+    width: 500px;
+    height: 500px;
+}
+
+.flex-item {
+    background-color: tomato;
+    width: 100px;
+    height: 100px;
+    border : 3px solid black;
+    font-size: 30px;
+    font-weight: bold;
+}
