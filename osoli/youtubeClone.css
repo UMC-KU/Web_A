@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*global*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+button{
+    border: none;
+    background-color: transparent ;
+    cursor: pointer;
+}
+a, a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*nav 바*/
+nav{
+    padding:0 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #252525;
+    height: 56px;
+    width: 100%;
+}
+.nav-icon{
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-button{
+    padding: 8px;
+}
+#nav-icon-svg{
+    fill: #fff;
+}
+
+/*nav-left 바*/
+.logo{
+    box-sizing: content-box;
+    width: 97px;
+    height: 20px;
+    padding: 18px 14px 18px 16px;
+}
+#nav-country{
+    display: block;
+    box-sizing: content-box;
+    width: 12.43px;
+    height: 44px;
+    margin: 12px 0 0 -10px;
+    font-size: 10px;
+    color: #AAAAAA;
+}
+
+/*nav-center 바*/
+.nav-center{
+    flex:0 1 728px;
+    justify-content: center;
+    padding: 0 4px;
+}
+.nav-inputBox, .flex>form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-inputBox{
+    box-sizing: content-box;
+    padding: 2px 6px;
+    border: 1px solid #363636;
+    border-right: none;
+    background-color: #121212;
+    width: 525px;
+    height: 34px;
+    border-radius: 2px 0 0 2px;
+}
+.nav-inputBox>input{
+    width: 494px;
+    height: 24px;
+    background-color: inherit;
+    border: none;
+}
+.nav-form{
+    margin-left: 40px;
+    padding: 4px;
+}
+.nav-form.nav-button{
+    background-color: #363636;
+}
+.nav-buttonIcon{
+    display: block;
+    height: 24px;
+}
+#nav-submitButton{
+    box-sizing: content-box;
+    background-color: #363636;
+    width: 56px;
+    height: 34px;
+    padding: 3px 6px;
+    border-radius: 0 2px 2px 0;
+}
+.mic-btn{
+    background-color: #121212;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+/*nav-right 바*/
+nav>div:nth-of-type(3)>.nav-button{
+    margin-right: 8px;
+}
+.nav-right{
+    min-width: 225px;
+    justify-content: flex-end;
+}
+#profile-button{
+    padding: 6px 1px;
+}
+#profile-button img{
+    border-radius: 50%;
+}
