@@ -21,4 +21,6 @@ const commentItemTemplat = (newComment) =>
     </div>
 </div>
 </li>
- $commentList.insertAdjacentHTML('afterbegin,newComment');
+
+ $commentList.insertAdjacentHTML('afterbegin,newComment'); 
+ {/* 4주차 실습 */}
