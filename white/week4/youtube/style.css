@@ -219,7 +219,7 @@ main {
     top:4px;
     display: flex;
     align-items: center;
-
+    
 }
 
 .menuItem {
@@ -459,4 +459,4 @@ main {
 	text-transform: uppercase;
 	border-radius: 3px;
 	margin-left: 10px;
-} 
+}

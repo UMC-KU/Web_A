@@ -1,9 +1,10 @@
+/* global */
+
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 button {
@@ -12,22 +13,21 @@ button {
     cursor: pointer;
 }
 
-a, a:active{
-    text-decoration: none; 
+a, a:active {
+    text-decoration: none;
     color: inherit;
 }
 
 .flex {
     display: flex;
     align-items: center;
-
 }
+
+/* navigation bar */
 
 nav {
     padding: 0 16px;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     position: fixed;
     left: 0;
     top: 0;
@@ -46,6 +46,8 @@ nav {
     padding: 8px;
 }
 
+/* nav left */
+
 #logo {
     box-sizing: content-box;
     width: 90px;
@@ -60,57 +62,35 @@ nav {
     height: 44px;
 }
 
-/* nav-right */
-
-#profile {
-    padding: 1px 6px;
-
-}
-
-#profile-btn img{
-    margin: 0px 8px;
-    border-radius: 50%;
-}
-
-.nav-right .nav-button{
-    margin-right: 8px;
-
-}
-.nav-right {
-    min-width: 225px;
-    justify-content: flex-end;
-}
+/* nav center */
 
 .nav-center {
-    flex-basis: 728px;
-
+    flex-basis: 728px;   
 }
 
 #search-form {
     flex: 1;
     margin-left: 40px;
     padding: 0 4px;
-
 }
 
 #search-form input {
     padding: 2px 6px;
-    border: 1px solid;
+    border: 1px solid #ccc;
     border-right: none;
     border-radius: 2px 0 0 2px;
     flex: 1;
     height: 40px;
-
 }
 
 #search-form input::placeholder {
-    color: hsl(0,0%,53,3%);
+    color: hsl(0, 0%, 53, 3%);
     font-size: 16px;
 }
 
 #search-form button {
     border: 1px solid #d3d3d3;
-    border-radius: 0 2px 2px 0;
+    border-radius: 0, 2px, 2px, 0;
     height: 40px;
     width: 64px;
     background-color: #f8f8f8;
@@ -123,4 +103,22 @@ nav {
     border-radius: 50%;
 }
 
-/* 유튜브클론 */
+/*nav right */
+
+#profile-btn {
+    padding: 1px 6px;
+}
+
+#profile-btn img {
+    margin: 0 8px;
+    border-radius: 50%;
+}
+
+.nav-right {
+    min-width: 225px;
+    justify-content: flex-end;
+}
+
+.nav-right .nav-btn {
+    margin-right: 8px;
+}
