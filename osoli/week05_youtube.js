@@ -1,4 +1,6 @@
 const $commentList=document.querySelector('#commentsList');
+const $commentForm = document.querySelector("#commentInputContainer");
+const $commentInput = document.querySelector("#commentInput");
 const commentItemTemplate=(newComment)=>{
     return `
     <li class="commentItem">
@@ -27,3 +29,14 @@ const commentItemTemplate=(newComment)=>{
 const newComment=commentItemTemplate("뭐냐");
 console.log(newComment);
 $commentList.insertAdjacentHTML('afterbegin',newComment);
+$commentForm.addEventListener('submit',handleSubmit);
+function handleSubmit(e){
+    e.preventDefault();
+    const newComment=$commentInput.value;
+    if(newComment){
+        return;
+    }
+    const newCommentTemp=commentItemTemplate(newComment);
+    $commentList.insertAdjacentHTML('afterbegin',newCommentTemp);
+    $commentInput.value="";
+}
