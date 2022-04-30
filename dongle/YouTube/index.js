@@ -33,9 +33,27 @@ const commentItemTemplate = (newComment) => {
 //const newComment = commentItemTemplate('안녕하세요.반갑습니다');
 //$commentList.insertAdjacentHTML('afterbegin', newComment); 
 
-$commentForm.addEventListener( 'submit', handleSublit );
+$commentForm.addEventListener( 'submit', handleSubmit );
 
-function handleSublit ( event ) {
+const comments = []
+
+function saveItem() {
+	localStorage.setItem("commments", JSON.stringify(comments));
+}
+
+function displayHistory() {
+	const savedComments = JSON.parse(localStorage.getItem("comments"));
+
+	savedComments.map( (comment) => {
+		const newCommentItem = commentItemTemplate(comment);
+		comments.push(comment);
+		$commentList.insertAdjacentHTML("afterbegin", newCommentItem);
+	} )
+}
+
+displayHistory();
+
+function handleSubmit ( event ) {
 	event.preventDefault();
 	const newComment = $commentInput.value;
 
@@ -43,4 +61,7 @@ function handleSublit ( event ) {
 	const newCommentItem = commentItemTemplate( newComment );
 	$commentList.insertAdjacentHTML( 'afterbegin', newCommentItem );
 	$commentInput.value = '';
+
+	comments.push(newComment);
+	saveItem();
 }
