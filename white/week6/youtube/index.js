@@ -1,6 +1,6 @@
+const $commentForm = document.querySelector("#commentInputContainer");
+const $commentInput = document.querySelector("#commentInput");
 const $commentList = document.querySelector('#commentsList');
-const $commentInput = document.querySelector('#commentInput');
-const $commentForm = document.querySelector('#commentInputContainer');
 
 const commentItemTemplate = (newComment) => { 
 	return `
@@ -29,39 +29,37 @@ const commentItemTemplate = (newComment) => {
 	`;
 }
 
+$commentForm.addEventListener('submit', handleSumbit);
 
-//const newComment = commentItemTemplate('안녕하세요.반갑습니다');
-//$commentList.insertAdjacentHTML('afterbegin', newComment); 
-
-$commentForm.addEventListener( 'submit', handleSubmit );
-
-const comments = []
+const comments = [];
 
 function saveItem() {
-	localStorage.setItem("commments", JSON.stringify(comments));
+	localStorage.setItem("comments", JSON.stringify(comments));
 }
 
-function displayHistory() {
-	const savedComments = JSON.parse(localStorage.getItem("comments"));
+function displayHistory () {
+	const savedComments = JSON.parse(localStorage.getItem('comments'));
 
-	savedComments.map( (comment) => {
+	savedComments.map(comment => {
 		const newCommentItem = commentItemTemplate(comment);
 		comments.push(comment);
-		$commentList.insertAdjacentHTML("afterbegin", newCommentItem);
-	} )
+		$commentList.insertAdjacentHTML('afterbegin', newCommentItem);
+	})
 }
 
 displayHistory();
 
-function handleSubmit ( event ) {
+
+function handleSumbit(event){
 	event.preventDefault();
 	const newComment = $commentInput.value;
 
-	if ( !newComment ) { return }
-	const newCommentItem = commentItemTemplate( newComment );
-	$commentList.insertAdjacentHTML( 'afterbegin', newCommentItem );
-	$commentInput.value = '';
+	if (!newComment) {return};
+	const newCommentItem = commentItemTemplate(newComment);
+	$commentList.insertAdjacentHTML('afterbegin', newCommentItem);
+    $commentInput.value = "";
 
 	comments.push(newComment);
+	// console.log(comments);
 	saveItem();
 }
