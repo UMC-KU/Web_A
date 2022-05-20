@@ -1,0 +1,19 @@
+{
+  "name": "web_a",
+  "version": "1.0.0",
+  "description": "UMC 2기 Web스터디 A팀",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UMC-KU/Web_A.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UMC-KU/Web_A/issues"
+  },
+  "homepage": "https://github.com/UMC-KU/Web_A#readme"
+}
